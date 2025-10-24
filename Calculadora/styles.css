@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 15px;
+    width: 320px;
+}
+
+#display {
+    width: 95%;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 2.2em;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 60px;
+    background-color: #f9f9f9;
+}
+
+.buttons {
+    display: grid;
+    /* La cuadrícula tendrá 5 filas para acomodar el diseño */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 18px 0;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #333;
+}
+
+.btn0 {
+    padding: 18px 0;
+    grid-column: span 2;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #333;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Colores y Estilos */
+.btn-number,
+.btn-decimal {
+    background-color: #e0e0e0;
+}
+
+.btn-operator {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btn-clear {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-equals {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Modificadores de diseño para replicar la imagen */
+
+/* El botón de Suma (+) ocupa dos filas (Fila 2 y Fila 3, en la 4ta columna) */
+.btn-plus-span-2-rows {
+    grid-row: span 2;
+}
+
+/* El botón de Igual (=) de la Fila 4 ocupa dos filas (Fila 4 y Fila 5, en la 4ta columna) */
+.btn-equals-span-2-rows {
+    grid-row: span 2;
+}
+
+/* La clase para los guiones bajos que representan el decimal */
+.btn-decimal-custom {
+    /* Mantiene el estilo normal de botón gris */
+}
