@@ -192,27 +192,7 @@
             }
         }
 
-        function calculateResult() {
-            try {
-                const expression = display.value.replace(/÷/g, '/').replace(/×/g, '*');
-                let result = eval(expression);
-
-                if (result === Infinity || result === -Infinity) {
-                    display.value = 'Error: Div/0';
-                } else {
-                    if (typeof result === 'number') {
-                        result = parseFloat(result.toFixed(6));
-                    }
-                    display.value = result;
-                }
-                
-                waitingForNewInput = true;
-
-            } catch (error) {
-                display.value = 'Error';
-                waitingForNewInput = true;
-            }
-        }
+       //falta calculo
     </script>
 </body>
 </html>
